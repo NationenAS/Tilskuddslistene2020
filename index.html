@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tilskuddslistene</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="lab-til__scroll_to"></div>
+
+  <div class="lab-til ">
+    <h2>Tilskuddslisten 2020</h2>
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+      style="width:0;height:0;position:absolute;overflow:hidden;" version="1.1">
+      <defs>
+        <symbol viewBox="0 0 12 8" id="down-caret">
+          <title>Vis mer</title>
+          <polyline fill="none" stroke="#333" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5"
+            points="0.9,1.1 6.1,6.9 11.1,1.1 " />
+        </symbol>
+      </defs>
+    </svg>
+    <div class="lab-til__form">
+      <input id="search-input" class="lab-til__form-name" type="text" placeholder="Søk på navn">
+      <select class="lab-til__form-munic" id="kommune-liste"></select>
+    </div>
+
+    <!-- knapper-->
+    <div class="lab-til__meta">
+      <button class="lab-til__button" id="prevPage" onclick="prevPage()">Forrige</button>
+      <div class="lab-til__meta_number">Side <span id="currentPage">1</span> av <span id="totalPage">1</span></div>
+      <div class="lab-til__meta_number">Antall treff: <span id="treff"> 10</span></div>
+      <button class="lab-til__button" id="nextPage" onclick="nextPage()">Neste</button>
+    </div>
+
+
+    <div class="lab-til__list">
+      <div class="lab-til__list-header">
+        <div>Organisasjon</div>
+        <div>Kommune</div>
+        <div>Sum</div>
+        <div></div>
+      </div>
+      <div class="lab-til__entries" id="lab-til__entries">        
+          
+          
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+  <script src="tilskuddsliste2020.js"></script>
+</body>
+
+</html>
